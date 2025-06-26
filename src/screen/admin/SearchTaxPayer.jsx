@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../assets/css/taxpayer.css";
+import "../../assets/css/Taxpayer.css";
 import PageHeader from "../../components/PageHeader";
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import { ToastContainer, toast } from 'react-toastify';
