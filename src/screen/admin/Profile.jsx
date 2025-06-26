@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 import PageHeader from "../../components/PageHeader";
 import "bootstrap/dist/css/bootstrap.min.css";
-import '../../assets/css/profile.css';
+import '../../assets/css/Profile.css';
 
 const Profile = () => {
   return (
