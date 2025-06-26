@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import "../assets/css/DataTable.css";
+import "../assets/css/Datatable.css";
 
 const DataTable = ({
   data,
