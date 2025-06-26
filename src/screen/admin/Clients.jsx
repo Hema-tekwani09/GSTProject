@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../assets/css/clients.css";
+import "../../assets/css/Clients.css";
 import PageHeader from "../../components/PageHeader";
 import ToggleSelect from "../../components/DropdownToggle";
 import { FaFileAlt } from "react-icons/fa";
