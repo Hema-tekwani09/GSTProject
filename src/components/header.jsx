@@ -47,6 +47,7 @@ const Header = ({ sidebarOpen, setSidebarOpen, menuButtonRef }) => {
 
         <div className="search-box" style={{ background: "#f7f8f9" }}>
           <input type="text" placeholder="Search for Results..." />
+          
           <FaSearch />
         </div>
       </div>
@@ -57,7 +58,8 @@ const Header = ({ sidebarOpen, setSidebarOpen, menuButtonRef }) => {
           onClick={toggleSubmenu}
           ref={profileRef}
         >
-          <FaCog size={18} style={{ color: "#c7cad3" }} />
+          <i className="fa-solid fa-gear switcher-icon"></i>
+          {/* <FaCog size={18} style={{ color: "#c7cad3" }} className="" /> */}
 
           {submenuOpen && (
             <div className="profile-submenu">

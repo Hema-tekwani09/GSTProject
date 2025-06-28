@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import menu from "../sidebar/menu.json";
 import "../assets/css/Sidebar.css";
-
+import { FaFileInvoiceDollar, FaReceipt } from "react-icons/fa";
 const Sidebar = ({ sidebarOpen, setSidebarOpen, isDesktop, sidebarRef }) => {
   const location = useLocation();
   const [openMenus, setOpenMenus] = useState({});

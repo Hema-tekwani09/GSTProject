@@ -5,16 +5,27 @@ import "../../assets/css/ClientDetails.css";
 import PageHeader from "../../components/PageHeader";
 import ToggleSelect from "../../components/DropdownToggle";
 import Tabs from "../../components/Tabs";
-
+// 👇 Import GstR1 component
+import GstR1 from "./GstR1"; // adjust the path as needed
 
 const yearOptions = ["2022-2023", "2023-2024", "2024-2025"];
 const frequencyOptions = ["MONTHLY", "QUARTERLY"];
 const monthOptions = [
-  "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
-  "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER",
+  "JANUARY",
+  "FEBRUARY",
+  "MARCH",
+  "APRIL",
+  "MAY",
+  "JUNE",
+  "JULY",
+  "AUGUST",
+  "SEPTEMBER",
+  "OCTOBER",
+  "NOVEMBER",
+  "DECEMBER",
 ];
 const companyOptions = clients.map((client) => client.name);
-const tabs = ["GSTR 1", "GSTR 3B", "GSTR 2A", "GSTR 2B","GSTR 4A"];
+const tabs = ["GSTR 1", "GSTR 3B", "GSTR 2A", "GSTR 2B", "GSTR 4A"];
 
 const ClientDetail = () => {
   const location = useLocation();
@@ -23,7 +34,7 @@ const ClientDetail = () => {
 
   const [activeTab, setActiveTab] = useState("GSTR 1");
   const [selectedCompany, setSelectedCompany] = useState("");
-
+  console.log(activeTab);
   const [filters, setFilters] = useState({
     returnType: "REGULAR",
     year: "2023-2024",
@@ -89,19 +100,19 @@ const ClientDetail = () => {
               value={filters.month}
               onChange={(val) => handleFilterChange("month", val)}
             />
-            <ToggleSelect
+            {/* <ToggleSelect
               label="Company"
               options={companyOptions}
               value={filters.company}
               onChange={(val) => handleFilterChange("company", val)}
-            />
+            /> */}
           </div>
 
           {/* Tabs */}
           <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
 
           {/* Client Info Table */}
-          <div className="table-responsive mt-4">
+          {/* <div className="table-responsive mt-4">
             <table className="table table-bordered table-striped text-center client-info-horizontal">
               <thead className="table-light">
                 <tr>
@@ -122,10 +133,10 @@ const ClientDetail = () => {
                 </tr>
               </tbody>
             </table>
-          </div>
+          </div> */}
 
           {/* Status Table */}
-          {client.status && client.status.length > 0 && (
+          {/* {client.status && client.status.length > 0 && (
             <div className="table-responsive mt-4">
               <h5>Status</h5>
               <table className="table table-bordered table-striped text-center">
@@ -144,6 +155,17 @@ const ClientDetail = () => {
                   </tr>
                 </tbody>
               </table>
+            </div>
+          )} */}
+          {/* GSTR 1 Tab Content */}
+          {activeTab === "GSTR 1" && (
+            <div className="Gstr-form">
+              <GstR1 />
+            </div>
+          )}
+          {activeTab === "GSTR 3B" && (
+            <div className="Gstr-form">
+              <GstR1 />
             </div>
           )}
         </div>

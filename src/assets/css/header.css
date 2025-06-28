@@ -144,3 +144,22 @@
   color: rgb(185, 78, 237);
   background-color: rgb(185 78 237 / 5%);
 }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.switcher-icon {
+  background-color: #ddd;
+  padding:10px;
+  border-radius: 25px;
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
